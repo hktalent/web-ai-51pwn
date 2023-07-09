@@ -1,0 +1,32 @@
+{
+  "name": "web-ai-51pwn",
+  "version": "1.0.0",
+  "description": "YOLO v3 and Tiny YOLO v1, v2, v3 object detection with Tensorflow.js,node 20.4.0",
+  "main": "dist/index.bundle.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "watch": "webpack --watch"
+  },
+  "author": "51pwn",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hktalent/web-ai-51pwn"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.22.8",
+    "@babel/plugin-transform-runtime": "^7.22.7",
+    "@babel/preset-env": "^7.22.7",
+    "@babel/preset-react": "^7.22.5",
+    "@tensorflow/tfjs": "^4.8.0",
+    "babel-loader": "^9.1.3",
+    "webpack": "^5.88.1",
+    "webpack-cli": "^5.1.4"
+  },
+  "keywords": [
+    "tfjs",
+    "tensorflow",
+    "yolo",
+    "tiny-yolo"
+  ]
+}
