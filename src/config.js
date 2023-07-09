@@ -1,10 +1,10 @@
-export const v1_tiny_model = 'https://chat.51pwn.com:2083/model/v1tiny/model.json';
+export const v1_tiny_model = 'https://51pwn.com/static/model/v1tiny/model.json';
 
-export const v2_tiny_model = 'https://chat.51pwn.com:2083/model/v2tiny/model.json';
+export const v2_tiny_model = 'https://51pwn.com/static/model/v2tiny/model.json';
 
-export const v3_tiny_model = 'https://chat.51pwn.com:2083/model/v3tiny/model.json';
+export const v3_tiny_model = 'https://51pwn.com/static/model/v3tiny/model.json';
 
-export const v3_model = 'https://chat.51pwn.com:2083/model/v3/model.json';
+export const v3_model = 'https://51pwn.com/static/model/v3/model.json';
 
 export const v1_tiny_anchors = [
   1.08,1.19, 3.42,4.41, 6.63,11.38, 9.42,5.11, 16.62,10.52
