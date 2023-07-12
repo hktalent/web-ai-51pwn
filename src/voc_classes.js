@@ -1,4 +1,4 @@
-export default global.charset4ai?['飞机',
+export default charset4ai?['飞机',
 '自行车',
 '鸟',
 '船',

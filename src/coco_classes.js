@@ -1,4 +1,4 @@
-export default global.charset4ai?[
+export default charset4ai?[
   '人',
  '自行车',
  '车',
