@@ -1,7 +1,7 @@
-szChar = process.env["charset4ai"]||"";
+const szChar = process.env["charset4ai"]||"",c1 = `./coco_classes${szChar}`,c2 = `./voc_classes${szChar}`;
 import * as tf from '@tensorflow/tfjs';
-import coco_classes from `./coco_classes${szChar}`;
-import voc_classes from `./voc_classes${szChar}`;
+import coco_classes from c1;
+import voc_classes from c2;
 import {
   v1_tiny_model,
   v2_tiny_model,
