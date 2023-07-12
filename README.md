@@ -21,7 +21,7 @@ import yolo from 'web-ai-51pwn';
 ```javascript
 import yolo from 'web-ai-51pwn';
 
-process.env["charset4ai"]="_zh"
+global.charset4ai = "_zh"
 
 // Use default models (stored in my GitHub demo repo)
 let myYolo = await yolo.v1tiny();

@@ -1,4 +1,4 @@
-const szChar = process.env["charset4ai"]||"",c1 = `./coco_classes${szChar}`,c2 = `./voc_classes${szChar}`;
+const szChar = global.charset4ai || "",c1 = `./coco_classes${szChar}`,c2 = `./voc_classes${szChar}`;
 import * as tf from '@tensorflow/tfjs';
 // import coco_classes from c1;
 // import voc_classes from c2;

@@ -1,6 +1,6 @@
 {
   "name": "web-ai-51pwn",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "YOLO v3 and Tiny YOLO v1, v2, v3 object detection with Tensorflow.js,node 20.4.0",
   "main": "dist/index.bundle.js",
   "scripts": {
