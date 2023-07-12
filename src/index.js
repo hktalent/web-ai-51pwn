@@ -1,6 +1,7 @@
+szChar = process.env["charset4ai"]||"";
 import * as tf from '@tensorflow/tfjs';
-import coco_classes from './coco_classes';
-import voc_classes from './voc_classes';
+import coco_classes from `./coco_classes${szChar}`;
+import voc_classes from `./voc_classes${szChar}`;
 import {
   v1_tiny_model,
   v2_tiny_model,

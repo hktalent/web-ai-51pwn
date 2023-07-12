@@ -19,6 +19,10 @@ import yolo from 'web-ai-51pwn';
 ### Initialize and load model
 
 ```javascript
+import yolo from 'web-ai-51pwn';
+
+process.env["charset4ai"]="_zh"
+
 // Use default models (stored in my GitHub demo repo)
 let myYolo = await yolo.v1tiny();
 let myYolo = await yolo.v2tiny();
