@@ -14,10 +14,7 @@ import {
 } from './config';
 import postprocess from './postprocess';
 
-const MAX_BOXES = 20;
-const INPUT_SIZE = 416;
-const SCORE_THRESHOLD = .5;
-const IOU_THRESHOLD = .3;
+const MAX_BOXES = 20,INPUT_SIZE = 416,SCORE_THRESHOLD = .5,IOU_THRESHOLD = .3;
 
 async function _loadModel(
   pathOrIOHandler,
@@ -55,7 +52,7 @@ async function _predict(
     const outputs = model.predict(imageTensor);
     return outputs;
   });
-
+  
   const boxes = await postprocess(
     version,
     outputs,
