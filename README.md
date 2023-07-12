@@ -13,6 +13,11 @@ yarn add web-ai-51pwn
 ### Import module
 
 ```javascript
+// 安装纯净版 JavaScript。这是性能最慢的选项。
+yarn add @tensorflow/tfjs
+// 有gpu的时候这样安装最快
+npm install @tensorflow/tfjs-node-gpu
+
 import yolo from 'web-ai-51pwn';
 ```
 
