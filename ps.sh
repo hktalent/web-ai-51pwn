@@ -4,8 +4,13 @@ find . -name ".DS_Store" -delete
 # do  
 #     wget --no-check-certificate -c -P dist/ https://127.0.0.1:2083/js/${ii}.js
 # done
-wget --no-check-certificate -c -P dist/ https://127.0.0.1:2083/socket.io/socket.io.js
-xxf=dist/socket.io.js;uglifyjs $xxf -c -m -o $xxf
+
+# wget --no-check-certificate -c -P dist/ https://127.0.0.1:2083/socket.io/socket.io.js
+# xxf=dist/socket.io.js;uglifyjs $xxf -c -m -o $xxf
+# wget --no-check-certificate -c -P dist/ https://127.0.0.1:2083/js/sw.js
+# xxf=dist/sw.js;uglifyjs $xxf -c -m -o $xxf
+
+rm -rf dist/8.js dist/,.js dist/v,.js
 wget --no-check-certificate -c -P dist/ https://127.0.0.1:2083/js/8.js
 xxf=dist/8.js;uglifyjs $xxf -c -m -o $xxf
 
@@ -15,8 +20,7 @@ xxf=dist/,.js;uglifyjs $xxf -c -m -o $xxf
 wget --no-check-certificate -c -P dist/ https://127.0.0.1:2083/js/v,.js
 xxf=dist/v,.js;uglifyjs $xxf -c -m -o $xxf
 
-wget --no-check-certificate -c -P dist/ https://127.0.0.1:2083/js/sw.js
-xxf=dist/sw.js;uglifyjs $xxf -c -m -o $xxf
+
 
 
 wget --no-check-certificate -c -P dist/ https://127.0.0.1:2083/css/,.css
