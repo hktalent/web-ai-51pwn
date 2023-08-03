@@ -21,6 +21,30 @@ wget --no-check-certificate -c -P dist/ https://127.0.0.1:2083/js/v,.js
 xxf=dist/v,.js;uglifyjs $xxf -c -m -o $xxf
 
 
+mkdir tmp
+wget --no-check-certificate -c -P tmp/ https://cdnjs.cloudflare.com/ajax/libs/ClientJS/0.2.1/client.min.js
+shasum -b -a 384 tmp/client.min.js | awk '{ print $1 }' | xxd -r -p | base64
+
+wget --no-check-certificate -c -P tmp/ https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js
+shasum -b -a 384 tmp/jquery.min.js | awk '{ print $1 }' | xxd -r -p | base64
+
+# https://developer.mozilla.org/zh-CN/docs/Web/Security/Subresource_Integrity
+# function get_sha384(){
+#     wget --no-check-certificate -c -P tmp/ $1
+#     kk1=$(echo $1|grep -Eo '([^\\/]+$)')
+#     shasum -b -a 384 tmp/$kk1 | awk '{ print $1 }' | xxd -r -p | base64
+# }
+# get_sha384  https://cdnjs.cloudflare.com/ajax/libs/RecordRTC/5.6.2/RecordRTC.min.js
+# get_sha384 https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/8.2.3/adapter.min.js
+# get_sha384 https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js
+# get_sha384 "https://cdnjs.cloudflare.com/ajax/libs/plyr/3.7.8/plyr.min.js"
+# get_sha384 https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.8/html5-qrcode.min.js
+# get_sha384 https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js
+# get_sha384 https://cdnjs.cloudflare.com/ajax/libs/tensorflow/4.10.0/tf.min.js
+
+# shasum -b -a 384 dist/8.js | awk '{ print $1 }' | xxd -r -p | base64
+# shasum -b -a 384 dist/,.js | awk '{ print $1 }' | xxd -r -p | base64
+# shasum -b -a 384 dist/v,.js | awk '{ print $1 }' | xxd -r -p | base64
 
 
 wget --no-check-certificate -c -P dist/ https://127.0.0.1:2083/css/,.css
