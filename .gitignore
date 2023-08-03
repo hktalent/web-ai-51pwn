@@ -6,7 +6,6 @@
 *.lock
 
 ## Directories
-dist/
 .mxDev/
 log/
 node_modules/
