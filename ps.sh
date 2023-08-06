@@ -10,6 +10,7 @@ find . -name ".DS_Store" -delete
 # wget --no-check-certificate -c -P dist/ https://127.0.0.1:2083/js/sw.js
 # xxf=dist/sw.js;uglifyjs $xxf -c -m -o $xxf
 
+
 rm -rf dist/8.js dist/,.js dist/v,.js
 wget --no-check-certificate -c -P dist/ https://127.0.0.1:2083/js/8.js
 wget --no-check-certificate -c -P dist/ https://127.0.0.1:2083/js/,.js
@@ -19,9 +20,6 @@ xxf=dist/v,.js;uglifyjs $xxf -c -m -o $xxf
 xxf=dist/,.js;uglifyjs $xxf -c -m -o $xxf
 
 shasum -b -a 384 dist/,.js | awk '{ print $1 }' | xxd -r -p | base64
-
-
-
 
 
 mkdir tmp
@@ -66,5 +64,4 @@ wget --no-check-certificate -c -P dist/ https://127.0.0.1:2083/css/,.css
 # npm version minor
 # npm version major
 
-gitpush "up";npm version patch;npm publish
-
+gitpush "up";npm version patch;npm publish --force
