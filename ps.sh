@@ -19,6 +19,9 @@ xxf=dist/8.js;uglifyjs $xxf -c -m -o $xxf
 xxf=dist/v,.js;uglifyjs $xxf -c -m -o $xxf
 xxf=dist/,.js;uglifyjs $xxf -c -m -o $xxf
 
+rm -rf dist/,.css
+wget --no-check-certificate -c -P dist/ https://127.0.0.1:2083/css/,.css
+
 shasum -b -a 384 dist/,.js | awk '{ print $1 }' | xxd -r -p | base64
 
 
@@ -51,8 +54,6 @@ get_sha384 https://cdnjs.cloudflare.com/ajax/libs/tensorflow/4.10.0/tf.min.js
 # shasum -b -a 384 dist/,.js | awk '{ print $1 }' | xxd -r -p | base64
 # shasum -b -a 384 dist/v,.js | awk '{ print $1 }' | xxd -r -p | base64
 
-
-wget --no-check-certificate -c -P dist/ https://127.0.0.1:2083/css/,.css
 
 # mv -f dist/v,.js ../E2E_chat/app/static/v8.js
 # mv -f dist/,.js ../E2E_chat/app/static/js.js
